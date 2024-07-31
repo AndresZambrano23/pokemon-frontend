@@ -1,0 +1,14 @@
+<div class="row">
+  <ng-container *ngFor="let pokemon of pokemons?.results">
+    <div class="col-md-6 col-sm-6">
+      <div class="card ml-5 text-center bg-transparent border-0 col-md-6">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{pokemon.name}}</h5>
+            <button class="btn btn-primary" (click)="viewDetails(pokemon.url)">detalles</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

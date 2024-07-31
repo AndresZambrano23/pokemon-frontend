@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Pokemon</h2>
+<mat-dialog-content>
+  <span>Habilidaes especiales</span><br>
+  <button type="submit" class="btn btn-info" (click)="abilities(data.name)">Ver habilidades</button><br>
+  @if(isHidden) {
+    <ng-container *ngFor="let ability of abilitiesData">
+      @if (ability.is_hidden) {
+        <span>Habilidad: {{ ability.ability.name }}</span><br>
+      }
+      <span></span>
+    </ng-container>
+  }<br><br>
+  <span>Habilitades</span><br>
+  <ng-container *ngFor="let ability of data.abilities">
+    @if (!ability.is_hidden) {
+      <span>Habilidad: {{ ability.ability.name }}</span><br>
+    }
+  </ng-container>
+</mat-dialog-content>

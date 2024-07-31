@@ -1,0 +1,17 @@
+<main class="container">
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+    <h3>Login Here</h3>
+
+    <label for="username">Username</label>
+    <input type="text" placeholder="Email or Phone" id="username" formControlName="user">
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password" formControlName="password">
+
+    <button type="submit">Log In</button>
+  </form>
+</main>
